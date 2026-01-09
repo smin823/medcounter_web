@@ -1,59 +1,103 @@
+import { Camera, Cpu, CheckCircle } from 'lucide-react';
 import './AppShowcase.css';
+
+const steps = [
+    {
+        number: "01",
+        icon: <Camera size={24} />,
+        title: "Point Your Camera",
+        description: "Simply open PillScan and point your phone camera at the pills you want to count."
+    },
+    {
+        number: "02",
+        icon: <Cpu size={24} />,
+        title: "AI Detection",
+        description: "Our advanced YOLO AI model instantly detects and counts each pill in real-time."
+    },
+    {
+        number: "03",
+        icon: <CheckCircle size={24} />,
+        title: "Get Results",
+        description: "See accurate counts instantly and save or share your results with one tap."
+    }
+];
 
 const AppShowcase = () => {
     return (
-        <section id="showcase" className="showcase">
+        <section id="how-it-works" className="showcase">
+            <div className="showcase-bg">
+                <div className="showcase-glow"></div>
+            </div>
+
             <div className="container">
-                <div className="showcase-header">
-                    <h2>Designed for <span className="gradient-text">Efficiency</span></h2>
-                    <p>A clean, intuitive interface that puts powerful tools at your fingertips.</p>
+                <div className="section-header">
+                    <span className="section-badge">How it Works</span>
+                    <h2>Count Pills in <span className="gradient-text">3 Simple Steps</span></h2>
+                    <p>No complex setup required. Just point, scan, and get results.</p>
                 </div>
 
-                <div className="phone-mockup-container">
-                    <div className="phone-frame">
-                        <div className="phone-notch"></div>
-                        <div className="phone-screen">
-                            {/* Fake App UI */}
-                            <div className="app-header">
-                                <div className="app-time">9:41</div>
-                                <div className="app-status">
-                                    <span>5G</span>
-                                    <div className="battery"></div>
+                <div className="showcase-content">
+                    {/* Steps */}
+                    <div className="steps-list">
+                        {steps.map((step, index) => (
+                            <div key={index} className="step-item">
+                                <div className="step-number">{step.number}</div>
+                                <div className="step-content">
+                                    <div className="step-icon">
+                                        {step.icon}
+                                    </div>
+                                    <div className="step-text">
+                                        <h3>{step.title}</h3>
+                                        <p>{step.description}</p>
+                                    </div>
                                 </div>
+                                {index < steps.length - 1 && <div className="step-connector"></div>}
                             </div>
+                        ))}
+                    </div>
 
-                            <div className="app-content">
-                                <div className="camera-view">
-                                    <div className="focus-ring"></div>
-                                    <div className="detected-pills">
-                                        {[...Array(8)].map((_, i) => (
-                                            <div key={i} className={`detected-box box-${i}`}></div>
-                                        ))}
-                                    </div>
-                                    <div className="scan-overlay"></div>
-                                </div>
-
-                                <div className="app-controls">
-                                    <div className="result-card">
-                                        <div className="result-row">
-                                            <span>Total Count</span>
-                                            <span className="count-value">42</span>
+                    {/* Phone Mockup */}
+                    <div className="showcase-phone">
+                        <div className="phone-glow"></div>
+                        <div className="phone-container">
+                            <div className="phone-bezel">
+                                <div className="phone-notch"></div>
+                                <div className="phone-screen">
+                                    <div className="screen-content">
+                                        {/* App UI Simulation */}
+                                        <div className="app-camera-view">
+                                            <div className="camera-overlay">
+                                                <div className="corner-mark top-left"></div>
+                                                <div className="corner-mark top-right"></div>
+                                                <div className="corner-mark bottom-left"></div>
+                                                <div className="corner-mark bottom-right"></div>
+                                            </div>
+                                            <div className="detection-animation">
+                                                {[...Array(6)].map((_, i) => (
+                                                    <div
+                                                        key={i}
+                                                        className="pill-marker"
+                                                        style={{
+                                                            left: `${20 + (i % 3) * 25}%`,
+                                                            top: `${25 + Math.floor(i / 3) * 35}%`,
+                                                            animationDelay: `${i * 0.2}s`
+                                                        }}
+                                                    ></div>
+                                                ))}
+                                            </div>
+                                            <div className="scan-beam"></div>
                                         </div>
-                                        <div className="result-row small">
-                                            <span>Confidence</span>
-                                            <span className="confidence-value">99.9%</span>
+                                        <div className="app-bottom-bar">
+                                            <div className="count-badge">
+                                                <span className="count-num">6</span>
+                                                <span className="count-text">Pills Detected</span>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div className="shutter-button">
-                                        <div className="shutter-inner"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div className="glow-effect"></div>
                 </div>
             </div>
         </section>

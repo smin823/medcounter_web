@@ -1,46 +1,61 @@
-import { Zap, Shield, FileText, Target } from 'lucide-react';
+import { Target, Zap, Shield, Share2 } from 'lucide-react';
 import './Features.css';
 
 const features = [
     {
-        icon: <Target size={32} />,
+        icon: <Target size={28} />,
         title: "99.9% Accuracy",
-        description: "Our advanced AI model is trained on thousands of pill variations to ensure precise counts every single time."
+        description: "Advanced YOLO AI model trained on thousands of pill variations ensures precise counts every time.",
+        highlight: "Most Accurate"
     },
     {
-        icon: <Zap size={32} />,
-        title: "Instant Detection",
-        description: "Get results in milliseconds. Just point your camera and let MedCounter do the heavy lifting instantly."
+        icon: <Zap size={28} />,
+        title: "Real-time Detection",
+        description: "Get results in under 100ms. Point your camera and watch PillScan count instantly.",
+        highlight: "Lightning Fast"
     },
     {
-        icon: <Shield size={32} />,
-        title: "Secure & Private",
-        description: "Your data is yours. We prioritize privacy with secure processing and strict data protection standards."
+        icon: <Shield size={28} />,
+        title: "100% Private",
+        description: "All processing happens on your device. Your data never leaves your phone.",
+        highlight: "On-Device AI"
     },
     {
-        icon: <FileText size={32} />,
+        icon: <Share2 size={28} />,
         title: "Easy Export",
-        description: "Generate detailed reports in PDF or Excel formats to share with pharmacists or keep for your records."
+        description: "Share counts instantly or export detailed reports for your records.",
+        highlight: "One Tap Share"
     }
 ];
 
 const Features = () => {
     return (
         <section id="features" className="features">
+            <div className="features-bg">
+                <div className="features-glow"></div>
+            </div>
+
             <div className="container">
                 <div className="section-header">
-                    <h2>Why Choose <span className="gradient-text">MedCounter</span>?</h2>
-                    <p>Experience the future of medical inventory management.</p>
+                    <span className="section-badge">Features</span>
+                    <h2>Why Choose <span className="gradient-text">PillScan</span>?</h2>
+                    <p>Built with cutting-edge AI technology for healthcare professionals and patients.</p>
                 </div>
 
                 <div className="features-grid">
                     {features.map((feature, index) => (
-                        <div key={index} className="feature-card glass-panel">
+                        <div
+                            key={index}
+                            className="feature-card"
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                            <div className="feature-highlight">{feature.highlight}</div>
                             <div className="feature-icon">
                                 {feature.icon}
                             </div>
                             <h3>{feature.title}</h3>
                             <p>{feature.description}</p>
+                            <div className="feature-line"></div>
                         </div>
                     ))}
                 </div>

@@ -1,17 +1,38 @@
-import { Smartphone, Twitter, Instagram, Mail } from 'lucide-react';
+import { Pill, Mail, Github, Twitter } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className="footer">
+            <div className="footer-glow"></div>
+
             <div className="container">
+                {/* CTA Section */}
+                <div className="footer-cta">
+                    <h3>Ready to count smarter?</h3>
+                    <p>Download PillScan today and experience the future of pill counting.</p>
+                    <div className="cta-buttons">
+                        <button className="btn-primary">
+                            <span>Download for iOS</span>
+                        </button>
+                        <button className="btn-secondary">
+                            <span>Download for Android</span>
+                        </button>
+                    </div>
+                </div>
+
+                {/* Footer Content */}
                 <div className="footer-content">
                     <div className="footer-brand">
-                        <div className="logo">
-                            <Smartphone className="logo-icon" />
-                            <span className="logo-text">MedCounter</span>
+                        <div className="footer-logo">
+                            <div className="logo-icon-wrapper">
+                                <Pill size={18} />
+                            </div>
+                            <span>PillScan</span>
                         </div>
-                        <p>The smartest way to count pills. Fast, accurate, and secure.</p>
+                        <p>AI-powered pill counting for healthcare professionals and patients. Fast, accurate, and private.</p>
                     </div>
 
                     <div className="footer-links">
@@ -24,8 +45,8 @@ const Footer = () => {
 
                         <div className="link-group">
                             <h4>Company</h4>
-                            <a href="/about">About Us</a>
-                            <a href="/careers">Careers</a>
+                            <a href="/about">About</a>
+                            <a href="/blog">Blog</a>
                             <a href="/contact">Contact</a>
                         </div>
 
@@ -37,12 +58,19 @@ const Footer = () => {
                     </div>
                 </div>
 
+                {/* Footer Bottom */}
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} MedCounter. All rights reserved.</p>
+                    <p>&copy; {currentYear} PillScan. All rights reserved.</p>
                     <div className="social-links">
-                        <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
-                        <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
-                        <a href="#" aria-label="Email"><Mail size={20} /></a>
+                        <a href="#" aria-label="Email">
+                            <Mail size={18} />
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <Twitter size={18} />
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <Github size={18} />
+                        </a>
                     </div>
                 </div>
             </div>
