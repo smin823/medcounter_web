@@ -493,11 +493,13 @@
     }
 
     .hero-trust {
-        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
     }
 
-    .hero-visual {
-        order: -1;
+    .trust-divider {
+        display: none;
     }
 
     .phone-frame {

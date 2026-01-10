@@ -72,7 +72,6 @@ const Hero = () => {
                     <div className="phone-wrapper">
                         <div className="phone-glow"></div>
                         <div className="phone-frame">
-                            <div className="phone-notch"></div>
                             <div className="phone-screen">
                                 <img
                                     src="/images/app-mockup-1.png"

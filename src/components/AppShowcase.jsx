@@ -61,7 +61,6 @@ const AppShowcase = () => {
                         <div className="phone-glow"></div>
                         <div className="phone-container">
                             <div className="phone-bezel">
-                                <div className="phone-notch"></div>
                                 <div className="phone-screen">
                                     <img
                                         src="/images/app-mockup-2.png"
