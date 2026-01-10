@@ -87,9 +87,12 @@
 }
 
 @keyframes badge-float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(2px);
     }
+
     50% {
         transform: translateY(-2px);
     }
@@ -281,20 +284,21 @@
 .scan-effect {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(238, 51, 102, 0.3) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(238, 51, 102, 0.3) 50%,
+            transparent 100%);
     background-size: 100% 200%;
     animation: scan-move 2.5s ease-in-out infinite;
 }
 
 @keyframes scan-move {
-    0%, 100% {
+
+    0%,
+    100% {
         background-position: 0% 0%;
     }
+
     50% {
         background-position: 0% 100%;
     }
@@ -313,10 +317,13 @@
 }
 
 @keyframes detect-pill {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
         transform: scale(0.95);
     }
+
     50% {
         opacity: 1;
         transform: scale(1);
@@ -412,7 +419,7 @@
 
 .card-accuracy {
     top: 20%;
-    left: 12%;
+    left: 11%;
     animation-delay: 0s;
 }
 
