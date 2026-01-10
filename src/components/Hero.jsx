@@ -33,13 +33,13 @@ const Hero = () => {
 
                     {/* CTA Buttons */}
                     <div className="hero-cta">
-                        <button className="btn-primary">
-                            <span>Download Free</span>
+                        <a href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                            <span>App Store</span>
                             <ArrowRight size={18} />
-                        </button>
-                        <button className="btn-secondary">
-                            <span>Watch Demo</span>
-                        </button>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.med.counter" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                            <span>Google Play</span>
+                        </a>
                     </div>
 
                     {/* Trust Indicators */}
@@ -82,8 +82,8 @@ const Hero = () => {
                             <Sparkles size={16} />
                         </div>
                         <div className="card-content">
-                            <span className="card-value">99.9%</span>
-                            <span className="card-label">Accuracy</span>
+                            <span className="card-value">Highly</span>
+                            <span className="card-label">Accurate</span>
                         </div>
                     </div>
 
@@ -92,8 +92,8 @@ const Hero = () => {
                             <Scan size={16} />
                         </div>
                         <div className="card-content">
-                            <span className="card-value">&lt;100ms</span>
-                            <span className="card-label">Detection</span>
+                            <span className="card-value">Fast</span>
+                            <span className="card-label">Processing</span>
                         </div>
                     </div>
                 </div>

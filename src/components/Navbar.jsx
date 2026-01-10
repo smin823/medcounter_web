@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Pill } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -26,9 +26,7 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-content">
                 <a href="/" className="logo">
-                    <div className="logo-icon-wrapper">
-                        <Pill className="logo-icon" />
-                    </div>
+                    <img src="/images/logo.png" alt="PillScan" className="logo-img" />
                     <span className="logo-text">PillScan</span>
                 </a>
 

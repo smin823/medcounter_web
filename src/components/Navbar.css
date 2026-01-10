@@ -37,21 +37,10 @@
     opacity: 0.9;
 }
 
-.logo-icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo-img {
     width: 36px;
     height: 36px;
-    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(238, 51, 102, 0.3);
-}
-
-.logo-icon {
-    color: white;
-    width: 20px;
-    height: 20px;
+    border-radius: 8px;
 }
 
 .logo-text {

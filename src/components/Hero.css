@@ -81,7 +81,18 @@
 }
 
 .hero-badge svg {
-    animation: float 3s ease-in-out infinite;
+    position: relative;
+    top: 1px;
+    animation: badge-float 3s ease-in-out infinite;
+}
+
+@keyframes badge-float {
+    0%, 100% {
+        transform: translateY(2px);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
 }
 
 .hero-text h1 {
