@@ -78,6 +78,7 @@ const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="modal-btn app-store"
                             >
+                                <img src="/images/apple-icon.png" alt="Apple" className="modal-icon" />
                                 <div className="modal-btn-text">
                                     <span className="modal-btn-small">Download on the</span>
                                     <span className="modal-btn-large">App Store</span>
@@ -89,6 +90,7 @@ const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="modal-btn google-play"
                             >
+                                <img src="/images/google-play-icon.png" alt="Google Play" className="modal-icon" />
                                 <div className="modal-btn-text">
                                     <span className="modal-btn-small">Get it on</span>
                                     <span className="modal-btn-large">Google Play</span>
