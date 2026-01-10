@@ -1,0 +1,160 @@
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import './LegalPage.css';
+
+const TermsOfService = () => {
+    return (
+        <div className="legal-page">
+            <div className="legal-header">
+                <div className="container">
+                    <Link to="/" className="back-link">
+                        <ArrowLeft size={20} />
+                        <span>Back to Home</span>
+                    </Link>
+                </div>
+            </div>
+
+            <div className="container">
+                <div className="legal-content">
+                    <h1>PillScan Terms of Service</h1>
+
+                    <section>
+                        <h2>Article 1 (Purpose)</h2>
+                        <p>
+                            The purpose of these Terms of Service is to define the rights, obligations, and responsibilities between the Company (hereinafter referred to as "the Company") and users regarding the use of PillScan (hereinafter referred to as "the App") services provided by the Company.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Article 2 (Definitions)</h2>
+                        <p>1. "Service" refers to all PillScan-related services that users can access on mobile devices and other platforms.</p>
+                        <p>2. "User" refers to an individual who has registered through social login and can continuously use the services provided by the App.</p>
+                        <p>3. "Subscriber" refers to a user who has subscribed to paid services and uses the services provided by the Company.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 3 (Posting and Amendment of Terms)</h2>
+                        <p>1. The Company shall post these Terms in a way that users can easily access them on the initial screen of the Service.</p>
+                        <p>2. The Company may amend these Terms when necessary, within the scope that does not violate relevant laws.</p>
+                        <p>3. When amending the Terms, the Company shall specify the date of application and reasons for amendment, and post them along with the current Terms on the initial screen of the App from 7 days prior to the date of application until the day before the application date.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 4 (Provision and Change of Service)</h2>
+                        <p>1. The Company provides pill scanning and counting services.</p>
+                        <p>2. The Company may change all or part of the services being provided when there are significant reasons for operational or technical needs.</p>
+                        <p>3. In case of changes to the content, usage method, or usage time of the service, the Company shall post the reasons for change, content of the changed service, and provision date on the initial screen of the App at least 7 days before the change.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 5 (Service Usage Time)</h2>
+                        <p>1. In principle, the service is available 24 hours a day, 365 days a year, unless there are special business or technical obstacles.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 6 (Free and Premium Services)</h2>
+                        <p>1. The Company provides both free and premium (paid) services.</p>
+
+                        <h3>2. Free Service:</h3>
+                        <ul>
+                            <li>Free users may use the pill scanning and counting features with daily usage limits (quota system).</li>
+                            <li>Free users will see advertisements (banner ads and native ads) within the App.</li>
+                            <li>The daily quota resets at midnight (local time) each day.</li>
+                            <li>The Company may adjust the free tier quota at any time with prior notice.</li>
+                        </ul>
+
+                        <h3>3. Premium Service:</h3>
+                        <ul>
+                            <li>Premium subscribers enjoy unlimited usage without daily quotas.</li>
+                            <li>Premium subscribers will not see any advertisements.</li>
+                            <li>Premium subscriptions are billed through Google Play Store or Apple App Store.</li>
+                            <li>Subscription automatically renews unless cancelled at least 24 hours before the end of the current period.</li>
+                        </ul>
+
+                        <p>4. Subscription cancellation is directly possible at any time through Google Play Store or Apple App Store. Subscribers can cancel their subscription through the subscription management page of the respective store.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 7 (Advertisements)</h2>
+                        <p>1. The Company displays advertisements to free users through Google Mobile Ads.</p>
+                        <p>2. Advertisements may be personalized based on user data as described in our Privacy Policy.</p>
+                        <p>3. Users may opt out of personalized advertising through device settings or by subscribing to Premium.</p>
+                        <p>4. The Company is not responsible for the content of third-party advertisements.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 8 (Termination of Usage Contract)</h2>
+                        <p>1. When a subscriber wishes to terminate the usage contract, they can request termination through the service page within the App.</p>
+                        <p>2. Even after cancelling the subscription, the service can be used for the remaining period of the current payment cycle, and it will not be renewed from the next payment cycle.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 9 (Company's Obligations)</h2>
+                        <p>1. The Company shall faithfully exercise the rights and fulfill the obligations stipulated by laws and these Terms.</p>
+                        <p>2. The Company shall have a security system in place to protect personal information (including credit information) so that users can safely use the service, and shall publish and comply with a personal information protection policy.</p>
+                        <p>3. The Company shall immediately process any opinions or complaints raised by users if deemed legitimate. However, if immediate processing is difficult, the Company shall notify the user of the reason and processing schedule.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 10 (User's Obligations)</h2>
+                        <p>1. Users shall not engage in the following actions:</p>
+                        <ul>
+                            <li>Registering false information when applying or changing information</li>
+                            <li>Stealing other people's information</li>
+                            <li>Modifying information posted by the Company</li>
+                            <li>Transmitting or posting information other than that specified by the Company (such as computer programs)</li>
+                            <li>Infringing on the intellectual property rights of the Company and other third parties</li>
+                            <li>Damaging the reputation of the Company and other third parties or interfering with their business</li>
+                            <li>Publicly disclosing or posting obscene or violent messages, images, voices, or other information that violates public order and morals on the service</li>
+                            <li>Other illegal or unfair acts</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Article 11 (Personal Information Protection)</h2>
+                        <p>1. The Company collects only the minimum necessary information for providing the service when collecting users' personal information.</p>
+                        <p>2. The Company does not collect information necessary for fulfilling purchase contracts in advance at the time of membership registration. However, this does not apply when collecting minimal specific personal information is necessary for identity verification prior to the purchase contract to fulfill obligations under relevant laws.</p>
+                        <p>3. When collecting and using users' personal information, the Company shall notify the user of the purpose and obtain consent.</p>
+                        <p>4. The Company cannot use collected personal information for purposes other than the intended purpose, and if a new purpose of use arises or if providing to a third party, the Company shall notify the user of the purpose and obtain consent at the stage of use or provision.</p>
+                        <p>5. To protect personal information, the Company shall minimize the number of people handling users' personal information and have a security system in place to protect personal information such as credit cards and bank accounts.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 12 (Company's Disclaimer)</h2>
+                        <p>1. The Company is exempt from responsibility for providing services in cases where services cannot be provided due to force majeure such as natural disasters or equivalent circumstances.</p>
+                        <p>2. The Company is not responsible for service usage obstacles caused by the user's own fault.</p>
+                        <p>3. The Company is not responsible for any loss of expected profits that users may incur by using the service, nor for any damages caused by materials obtained through the service.</p>
+                        <p>4. The Company does not guarantee the accuracy of the pill scanning and counting service. The Company is not responsible even if the counting results do not match reality or if errors occur. Users should use the counting results for reference only, and the final judgment should be made under the user's own responsibility.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 13 (Dispute Resolution)</h2>
+                        <p>1. The Company shall establish and operate a damage compensation processing organization to reflect legitimate opinions or complaints raised by users and to compensate for damages.</p>
+                        <p>2. The Company shall prioritize processing complaints and opinions submitted by users. However, if prompt processing is difficult, the Company shall immediately notify the user of the reason and processing schedule.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 14 (Governing Law and Jurisdiction)</h2>
+                        <p>1. The interpretation of these Terms and disputes between the Company and users shall be governed by the laws of the Republic of Korea.</p>
+                        <p>2. In case of a lawsuit arising from the use of the service, it shall be under the jurisdiction of the courts of the Republic of Korea.</p>
+                    </section>
+
+                    <section>
+                        <h2>Article 15 (Intellectual Property Rights)</h2>
+                        <p>1. PillScan is a registered trademark of the Company. All rights to this trademark belong to the Company.</p>
+                        <p>2. Copyright and intellectual property rights to the service belong to the Company. Users shall not infringe on the Company's intellectual property rights when using the services provided by the Company.</p>
+                        <p>3. Users may not use the PillScan trademark or create or use derivative trademarks based on it without the written consent of the Company.</p>
+                        <p>4. The services and related information provided by the Company shall not be reproduced, transmitted, published, distributed, broadcast, or otherwise used or allowed to be used by third parties without the prior consent of the Company.</p>
+                    </section>
+
+                    <section>
+                        <h2>Supplementary Provision</h2>
+                        <p>These Terms shall be effective from December 18, 2025.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default TermsOfService;

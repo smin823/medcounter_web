@@ -412,13 +412,13 @@
 
 .card-accuracy {
     top: 15%;
-    left: -10%;
+    left: 5%;
     animation-delay: 0s;
 }
 
 .card-speed {
     bottom: 20%;
-    right: -5%;
+    right: 10%;
     animation-delay: 3s;
 }
 

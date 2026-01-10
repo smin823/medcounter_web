@@ -159,3 +159,129 @@
         z-index: 1001;
     }
 }
+
+/* Download Modal */
+.download-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.download-modal {
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: all var(--transition-normal);
+}
+
+.modal-close:hover {
+    background: var(--glass-bg-hover);
+    color: var(--text-main);
+}
+
+.download-modal h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.download-modal p {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+}
+
+.modal-btn.app-store {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.modal-btn.app-store:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.modal-btn.google-play {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
+    color: white;
+}
+
+.modal-btn.google-play:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(238, 51, 102, 0.4);
+}
+
+.modal-btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal-btn-small {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.modal-btn-large {
+    font-size: 1.1rem;
+    font-weight: 600;
+}

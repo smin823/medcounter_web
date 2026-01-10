@@ -1,4 +1,4 @@
-import { Pill, Mail, Github, Twitter } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -14,12 +14,12 @@ const Footer = () => {
                     <h3>Ready to count smarter?</h3>
                     <p>Download PillScan today and experience the future of pill counting.</p>
                     <div className="cta-buttons">
-                        <button className="btn-primary">
+                        <a href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707" target="_blank" rel="noopener noreferrer" className="btn-primary">
                             <span>Download for iOS</span>
-                        </button>
-                        <button className="btn-secondary">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.med.counter" target="_blank" rel="noopener noreferrer" className="btn-secondary">
                             <span>Download for Android</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -27,12 +27,10 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <div className="logo-icon-wrapper">
-                                <Pill size={18} />
-                            </div>
+                            <img src="/images/logo.png" alt="PillScan" className="footer-logo-img" />
                             <span>PillScan</span>
                         </div>
-                        <p>AI-powered pill counting for healthcare professionals and patients. Fast, accurate, and private.</p>
+                        <p>AI-powered pill counting for pharmacists and pharmacy technicians. Fast, accurate, and privacy-focused.</p>
                     </div>
 
                     <div className="footer-links">
@@ -40,20 +38,17 @@ const Footer = () => {
                             <h4>Product</h4>
                             <a href="#features">Features</a>
                             <a href="#how-it-works">How it Works</a>
-                            <a href="#pricing">Pricing</a>
-                        </div>
-
-                        <div className="link-group">
-                            <h4>Company</h4>
-                            <a href="/about">About</a>
-                            <a href="/blog">Blog</a>
-                            <a href="/contact">Contact</a>
                         </div>
 
                         <div className="link-group">
                             <h4>Legal</h4>
                             <a href="/privacy">Privacy Policy</a>
                             <a href="/terms">Terms of Service</a>
+                        </div>
+
+                        <div className="link-group">
+                            <h4>Contact</h4>
+                            <a href="mailto:medcounter@plolabs.com">medcounter@plolabs.com</a>
                         </div>
                     </div>
                 </div>
@@ -62,14 +57,8 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {currentYear} PillScan. All rights reserved.</p>
                     <div className="social-links">
-                        <a href="#" aria-label="Email">
+                        <a href="mailto:medcounter@plolabs.com" aria-label="Email">
                             <Mail size={18} />
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                            <Twitter size={18} />
-                        </a>
-                        <a href="#" aria-label="GitHub">
-                            <Github size={18} />
                         </a>
                     </div>
                 </div>

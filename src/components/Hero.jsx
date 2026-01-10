@@ -1,7 +1,10 @@
-import { ArrowRight, Sparkles, Scan, Shield } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Sparkles, Scan, Shield, Camera, X, Apple, Play } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
+    const [showDownloadModal, setShowDownloadModal] = useState(false);
+
     return (
         <section className="hero">
             {/* Background Effects */}
@@ -33,17 +36,21 @@ const Hero = () => {
 
                     {/* CTA Buttons */}
                     <div className="hero-cta">
-                        <a href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                            <span>App Store</span>
+                        <button className="btn-primary" onClick={() => setShowDownloadModal(true)}>
+                            <span>Download App</span>
                             <ArrowRight size={18} />
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.med.counter" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                            <span>Google Play</span>
-                        </a>
+                        </button>
                     </div>
 
                     {/* Trust Indicators */}
                     <div className="hero-trust">
+                        <div className="trust-item">
+                            <div className="trust-icon">
+                                <Camera size={18} />
+                            </div>
+                            <span>Photo Detection</span>
+                        </div>
+                        <div className="trust-divider"></div>
                         <div className="trust-item">
                             <div className="trust-icon">
                                 <Scan size={18} />
@@ -98,6 +105,45 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Download Modal */}
+            {showDownloadModal && (
+                <div className="download-modal-overlay" onClick={() => setShowDownloadModal(false)}>
+                    <div className="download-modal" onClick={(e) => e.stopPropagation()}>
+                        <button className="modal-close" onClick={() => setShowDownloadModal(false)}>
+                            <X size={20} />
+                        </button>
+                        <h3>Download PillScan</h3>
+                        <p>Choose your platform</p>
+                        <div className="modal-buttons">
+                            <a
+                                href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="modal-btn app-store"
+                            >
+                                <Apple size={24} />
+                                <div className="modal-btn-text">
+                                    <span className="modal-btn-small">Download on the</span>
+                                    <span className="modal-btn-large">App Store</span>
+                                </div>
+                            </a>
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.med.counter"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="modal-btn google-play"
+                            >
+                                <Play size={24} />
+                                <div className="modal-btn-text">
+                                    <span className="modal-btn-small">Get it on</span>
+                                    <span className="modal-btn-large">Google Play</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

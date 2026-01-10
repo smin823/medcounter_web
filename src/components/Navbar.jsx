@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Apple, Play } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [showDownloadModal, setShowDownloadModal] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,46 +16,92 @@ const Navbar = () => {
     }, []);
 
     useEffect(() => {
-        if (mobileMenuOpen) {
+        if (mobileMenuOpen || showDownloadModal) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
         }
-    }, [mobileMenuOpen]);
+    }, [mobileMenuOpen, showDownloadModal]);
+
+    const handleDownloadClick = () => {
+        setShowDownloadModal(true);
+        setMobileMenuOpen(false);
+    };
 
     return (
-        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-            <div className="container navbar-content">
-                <a href="/" className="logo">
-                    <img src="/images/logo.png" alt="PillScan" className="logo-img" />
-                    <span className="logo-text">PillScan</span>
-                </a>
+        <>
+            <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+                <div className="container navbar-content">
+                    <a href="/" className="logo">
+                        <img src="/images/logo.png" alt="PillScan" className="logo-img" />
+                        <span className="logo-text">PillScan</span>
+                    </a>
 
-                <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-                    <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
-                    <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>How it Works</a>
-                    <a href="#showcase" onClick={() => setMobileMenuOpen(false)}>Showcase</a>
-                    <div className="nav-mobile-cta">
-                        <button className="btn-primary">
+                    <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
+                        <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
+                        <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>How it Works</a>
+                        <a href="#showcase" onClick={() => setMobileMenuOpen(false)}>Showcase</a>
+                        <div className="nav-mobile-cta">
+                            <button className="btn-primary" onClick={handleDownloadClick}>
+                                <span>Download App</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="nav-actions">
+                        <button className="btn-primary nav-cta" onClick={handleDownloadClick}>
                             <span>Download App</span>
+                        </button>
+                        <button
+                            className="mobile-menu-btn"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                        >
+                            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
                     </div>
                 </div>
+            </nav>
 
-                <div className="nav-actions">
-                    <button className="btn-primary nav-cta">
-                        <span>Download App</span>
-                    </button>
-                    <button
-                        className="mobile-menu-btn"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-                    >
-                        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+            {/* Download Modal */}
+            {showDownloadModal && (
+                <div className="download-modal-overlay" onClick={() => setShowDownloadModal(false)}>
+                    <div className="download-modal" onClick={(e) => e.stopPropagation()}>
+                        <button className="modal-close" onClick={() => setShowDownloadModal(false)}>
+                            <X size={20} />
+                        </button>
+                        <h3>Download PillScan</h3>
+                        <p>Choose your platform</p>
+                        <div className="modal-buttons">
+                            <a
+                                href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="modal-btn app-store"
+                            >
+                                <Apple size={24} />
+                                <div className="modal-btn-text">
+                                    <span className="modal-btn-small">Download on the</span>
+                                    <span className="modal-btn-large">App Store</span>
+                                </div>
+                            </a>
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.med.counter"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="modal-btn google-play"
+                            >
+                                <Play size={24} />
+                                <div className="modal-btn-text">
+                                    <span className="modal-btn-small">Get it on</span>
+                                    <span className="modal-btn-large">Google Play</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            )}
+        </>
     );
 };
 
