@@ -67,48 +67,11 @@ const Hero = () => {
                         <div className="phone-frame">
                             <div className="phone-notch"></div>
                             <div className="phone-screen">
-                                {/* Status Bar */}
-                                <div className="screen-status">
-                                    <span>9:41</span>
-                                    <div className="status-icons">
-                                        <span>5G</span>
-                                        <div className="battery-icon"></div>
-                                    </div>
-                                </div>
-
-                                {/* Camera View */}
-                                <div className="camera-preview">
-                                    <div className="scan-effect"></div>
-                                    <div className="detection-grid">
-                                        {[...Array(9)].map((_, i) => (
-                                            <div
-                                                key={i}
-                                                className="pill-detection"
-                                                style={{
-                                                    animationDelay: `${i * 0.15}s`,
-                                                    left: `${15 + (i % 3) * 30}%`,
-                                                    top: `${20 + Math.floor(i / 3) * 25}%`
-                                                }}
-                                            >
-                                                <div className="detection-box"></div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Bottom UI */}
-                                <div className="screen-bottom">
-                                    <div className="count-display">
-                                        <div className="count-label">Detected</div>
-                                        <div className="count-value">
-                                            <span className="count-number">9</span>
-                                            <span className="count-unit">pills</span>
-                                        </div>
-                                    </div>
-                                    <div className="capture-btn">
-                                        <div className="capture-inner"></div>
-                                    </div>
-                                </div>
+                                <img
+                                    src="/images/app-mockup-1.png"
+                                    alt="PillScan App"
+                                    className="mockup-image"
+                                />
                             </div>
                         </div>
                     </div>

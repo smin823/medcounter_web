@@ -63,37 +63,11 @@ const AppShowcase = () => {
                             <div className="phone-bezel">
                                 <div className="phone-notch"></div>
                                 <div className="phone-screen">
-                                    <div className="screen-content">
-                                        {/* App UI Simulation */}
-                                        <div className="app-camera-view">
-                                            <div className="camera-overlay">
-                                                <div className="corner-mark top-left"></div>
-                                                <div className="corner-mark top-right"></div>
-                                                <div className="corner-mark bottom-left"></div>
-                                                <div className="corner-mark bottom-right"></div>
-                                            </div>
-                                            <div className="detection-animation">
-                                                {[...Array(6)].map((_, i) => (
-                                                    <div
-                                                        key={i}
-                                                        className="pill-marker"
-                                                        style={{
-                                                            left: `${20 + (i % 3) * 25}%`,
-                                                            top: `${25 + Math.floor(i / 3) * 35}%`,
-                                                            animationDelay: `${i * 0.2}s`
-                                                        }}
-                                                    ></div>
-                                                ))}
-                                            </div>
-                                            <div className="scan-beam"></div>
-                                        </div>
-                                        <div className="app-bottom-bar">
-                                            <div className="count-badge">
-                                                <span className="count-num">6</span>
-                                                <span className="count-text">Pills Detected</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <img
+                                        src="/images/app-mockup-2.png"
+                                        alt="PillScan App Real-time Mode"
+                                        className="mockup-image"
+                                    />
                                 </div>
                             </div>
                         </div>
