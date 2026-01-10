@@ -76,23 +76,17 @@ const Navbar = () => {
                                 href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="modal-btn app-store"
+                                className="store-badge"
                             >
-                                <div className="modal-btn-text">
-                                    <span className="modal-btn-small">Download on the</span>
-                                    <span className="modal-btn-large">App Store</span>
-                                </div>
+                                <img src="/images/app-store-badge.svg" alt="Download on the App Store" />
                             </a>
                             <a
                                 href="https://play.google.com/store/apps/details?id=com.med.counter"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="modal-btn google-play"
+                                className="store-badge"
                             >
-                                <div className="modal-btn-text">
-                                    <span className="modal-btn-small">Get it on</span>
-                                    <span className="modal-btn-large">Google Play</span>
-                                </div>
+                                <img src="/images/google-play-badge.png" alt="Get it on Google Play" />
                             </a>
                         </div>
                     </div>
