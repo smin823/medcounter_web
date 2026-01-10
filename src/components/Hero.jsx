@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Sparkles, Scan, Shield, Camera, X, Apple, Play } from 'lucide-react';
+import { ArrowRight, Sparkles, Scan, Shield, Camera, X } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
@@ -122,7 +122,6 @@ const Hero = () => {
                                 rel="noopener noreferrer"
                                 className="modal-btn app-store"
                             >
-                                <Apple size={24} />
                                 <div className="modal-btn-text">
                                     <span className="modal-btn-small">Download on the</span>
                                     <span className="modal-btn-large">App Store</span>
@@ -134,7 +133,6 @@ const Hero = () => {
                                 rel="noopener noreferrer"
                                 className="modal-btn google-play"
                             >
-                                <Play size={24} />
                                 <div className="modal-btn-text">
                                     <span className="modal-btn-small">Get it on</span>
                                     <span className="modal-btn-large">Google Play</span>

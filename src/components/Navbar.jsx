@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Apple, Play } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -78,7 +78,6 @@ const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="modal-btn app-store"
                             >
-                                <Apple size={24} />
                                 <div className="modal-btn-text">
                                     <span className="modal-btn-small">Download on the</span>
                                     <span className="modal-btn-large">App Store</span>
@@ -90,7 +89,6 @@ const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="modal-btn google-play"
                             >
-                                <Play size={24} />
                                 <div className="modal-btn-text">
                                     <span className="modal-btn-small">Get it on</span>
                                     <span className="modal-btn-large">Google Play</span>
