@@ -14,7 +14,7 @@ const Footer = () => {
                     <h3>Ready to count smarter?</h3>
                     <p>Download PillScan today and experience the future of pill counting.</p>
                     <div className="cta-buttons">
-                        <a href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                        <a href="https://apps.apple.com/us/app/pillscan-pill-counting-app/id6476859707" target="_blank" rel="noopener noreferrer" className="btn-secondary">
                             <span>Download for iOS</span>
                         </a>
                         <a href="https://play.google.com/store/apps/details?id=com.med.counter" target="_blank" rel="noopener noreferrer" className="btn-secondary">
