@@ -40,7 +40,6 @@ const Navbar = () => {
                     <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
                         <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
                         <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>How it Works</a>
-                        <a href="#showcase" onClick={() => setMobileMenuOpen(false)}>Showcase</a>
                         <div className="nav-mobile-cta">
                             <button className="btn-primary" onClick={handleDownloadClick}>
                                 <span>Download App</span>
