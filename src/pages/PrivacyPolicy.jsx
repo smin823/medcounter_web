@@ -94,7 +94,7 @@ const PrivacyPolicy = () => {
                     <section>
                         <h2>6. Your Rights</h2>
                         <p>
-                            You may request access to, correction of, or deletion of your personal data at any time by contacting us at medcounter@plolabs.com.
+                            You may request access to, correction of, or deletion of your personal data at any time by contacting us at contact@plolabs.com.
                         </p>
                     </section>
 
@@ -135,7 +135,7 @@ const PrivacyPolicy = () => {
                             If you encounter any issues during the data deletion process or need further assistance, please contact us at:
                         </p>
                         <p className="contact-email">
-                            Email: <a href="mailto:medcounter@plolabs.com">medcounter@plolabs.com</a>
+                            Email: <a href="mailto:contact@plolabs.com">contact@plolabs.com</a>
                         </p>
                         <p>
                             Protecting your personal information is PillScan's top priority. We respect your choices regarding your data management.
@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
                             If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at:
                         </p>
                         <p className="contact-email">
-                            Email: <a href="mailto:medcounter@plolabs.com">medcounter@plolabs.com</a>
+                            Email: <a href="mailto:contact@plolabs.com">contact@plolabs.com</a>
                         </p>
                     </section>
                 </div>

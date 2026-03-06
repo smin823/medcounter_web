@@ -48,7 +48,7 @@ const Footer = () => {
 
                         <div className="link-group">
                             <h4>Contact</h4>
-                            <a href="mailto:medcounter@plolabs.com">medcounter@plolabs.com</a>
+                            <a href="mailto:contact@plolabs.com">contact@plolabs.com</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {currentYear} PillScan. All rights reserved.</p>
                     <div className="social-links">
-                        <a href="mailto:medcounter@plolabs.com" aria-label="Email">
+                        <a href="mailto:contact@plolabs.com" aria-label="Email">
                             <Mail size={18} />
                         </a>
                     </div>
